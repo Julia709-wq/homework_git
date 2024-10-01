@@ -17,8 +17,8 @@ def sort_by_date(my_list: list, ascending=True) -> list:
         """Преобразует строку в объект datetime"""
         return datetime.fromisoformat(item['date'])
 
-    sorted_list = []
+    sorted_by_date_list = []
     for item in my_list:
         sorted_list = sorted(my_list, key=parse_date, reverse=ascending)
 
-    return sorted_list
+    return sorted_by_date_list
