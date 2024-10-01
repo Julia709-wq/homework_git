@@ -19,6 +19,7 @@ def sort_by_date(my_list: list, ascending=True) -> list:
 
     sorted_by_date_list = []
     for item in my_list:
-        sorted_by_date_list = sorted(my_list, key=parse_date, reverse=ascending)
+        sorted_list = sorted(my_list, key=parse_date, reverse=ascending)
 
-    return sorted_by_date_list
+    return sorted_list
+
