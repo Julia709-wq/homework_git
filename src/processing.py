@@ -14,14 +14,14 @@ def filter_by_state(my_list, state='EXECUTED'):
 #                        {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}]))
 
 
-def sort_by_date(my_list, ascending=False):
+def sort_by_date(my_list, ascending=True):
     # Функция для преобразования строки даты в объект datetime
     def parse_date(date):
         return datetime.fromisoformat(item['date'])
 
     sorted_list = []
     for item in my_list:
-        sorted_list.append(sorted(my_list, key=parse_date, reverse=ascending))
+        sorted_list = sorted(my_list, key=parse_date, reverse=ascending)
 
     return sorted_list
 
